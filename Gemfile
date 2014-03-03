@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
 gem 'pg'
@@ -10,7 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
-gem 'rails-backbone', :git => 'git@github.com:codebrew/backbone-rails.git'
+gem 'rails-backbone', github: 'codebrew/backbone-rails'
 
 group :test do
   gem 'rspec-rails'
