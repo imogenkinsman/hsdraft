@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 gem 'rails', '4.0.3'
 
@@ -13,6 +14,9 @@ gem 'rails-backbone', github: 'codebrew/backbone-rails'
 
 group :test do
   gem 'rspec-rails'
+  gem 'coveralls', require: false
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'capybara', '~> 2.1'
 end
 
 group :production do
