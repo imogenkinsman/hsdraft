@@ -17,6 +17,7 @@ group :test do
   gem 'coveralls', require: false
   gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara', '~> 2.1'
+  gem 'shoulda-matchers', '~> 2.5'
 end
 
 group :production do

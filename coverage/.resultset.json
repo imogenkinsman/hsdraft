@@ -1,0 +1,67 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/jade/RubymineProjects/hsdraft/spec/models/card_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/app/models/card.rb": [
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/spec/models/draft_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/app/models/draft.rb": [
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/spec/models/selection_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/jade/RubymineProjects/hsdraft/app/models/selection.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1393883767
+  }
+}
