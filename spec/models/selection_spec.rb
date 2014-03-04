@@ -6,7 +6,7 @@ describe Selection do
 
   it 'can be instantiated' do
     selection = Selection.new
-    expect(selection).to be_valid
+    expect(selection).to be_an_instance_of(Selection)
   end
 
   it 'has a valid factory' do

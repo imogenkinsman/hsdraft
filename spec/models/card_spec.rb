@@ -4,7 +4,7 @@ describe Card do
 
   it 'can be instantiated' do
     card = Card.new
-    expect(card).to be_valid
+    expect(card).to be_an_instance_of(Card)
   end
 
   it 'has a valid factory' do
