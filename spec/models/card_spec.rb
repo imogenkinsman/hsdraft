@@ -18,9 +18,4 @@ describe Card do
     expect(build(:card, type: 'furniture')).not_to be_valid
   end
 
-  it 'is invalid without a valid curse_url' do
-    expect(build(:card, curse_url: 'http://www.hearthpwn.com/cards/436')).to be_valid
-    expect(build(:card, curse_url: 'http://www.google.com')).not_to be_valid
-  end
-
 end

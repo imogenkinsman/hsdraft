@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140303212956) do
   enable_extension "plpgsql"
 
   create_table "cards", force: true do |t|
-    t.string   "curse_url"
+    t.integer  "image_id"
     t.string   "name"
     t.integer  "cost"
     t.integer  "rarity"
@@ -42,10 +42,9 @@ ActiveRecord::Schema.define(version: 20140303212956) do
   end
 
   create_table "selections", force: true do |t|
-    t.integer  "first_card_id"
+    t.integer  "chosen_card_id"
     t.integer  "second_card_id"
     t.integer  "third_card_id"
-    t.integer  "picked"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
