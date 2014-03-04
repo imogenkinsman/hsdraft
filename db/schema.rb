@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303212956) do
+ActiveRecord::Schema.define(version: 20140304031557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140303212956) do
     t.integer  "third_card_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "draft_id"
   end
 
 end
