@@ -17,5 +17,7 @@ module Hsdraft
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.i18n.enforce_available_locales = false
   end
 end
