@@ -9,10 +9,13 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml', '~> 4.0.5'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'ejs'
 
-gem 'rails-backbone', github: 'codebrew/backbone-rails'
+gem 'rabl'
+gem 'oj' #json parser for rabl
+
+#gem 'rails-backbone', github: 'codebrew/backbone-rails'
 
 group :test do
   gem 'rspec-rails'
