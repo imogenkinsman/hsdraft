@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'ejs'
 
 gem 'rabl'
-gem 'oj' #json parser for rabl
+gem 'oj' # fast json parser for rabl
 
 #gem 'rails-backbone', github: 'codebrew/backbone-rails'
 

@@ -29,6 +29,6 @@ Hsdraft::Application.routes.draw do
   root 'drafts#new'
 
   resources :drafts
-  resources :cards
+  get 'cards' => 'cards#index'
 
 end
