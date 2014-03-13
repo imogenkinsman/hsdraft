@@ -12,9 +12,9 @@ describe Draft do
     expect(build(:draft)).to be_valid
   end
 
-  it 'requires a valid champion type' do
-    expect(build(:draft, champion: 'mage')).to be_valid
-    expect(build(:draft, champion: 'frost golem')).not_to be_valid
-  end
+  #it 'requires a valid champion type' do
+  #  expect(build(:draft, champion: 'mage')).to be_valid
+  #  expect(build(:draft, champion: 'frost golem')).not_to be_valid
+  #end
 
 end

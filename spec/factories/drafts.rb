@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :draft do
-    champion 'mage'
+    hero_id 1
   end
 end

@@ -1,0 +1,4 @@
+%div(class='container')
+  = form_for @draft do |f|
+    = f.select :hero_id, Hero.all.map { |hero| [hero.name, hero.id] }
+    = f.submit
