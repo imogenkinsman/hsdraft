@@ -11,13 +11,13 @@ class DraftsController < ApplicationController
   end
 
   def show
-
+    @draft = Draft.find(params[:id])
   end
 
   private
 
     def draft_params
-      params.permit(:hero_id)
+      params.require(:draft).permit(:hero_id)
     end
 
 end
