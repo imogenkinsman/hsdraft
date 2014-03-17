@@ -15,4 +15,5 @@
 //= require_tree .
 //= require underscore-min
 //= require backbone-min
+//= require typeahead.bundle.min.js
 //= require bootstrap
