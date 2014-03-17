@@ -1,10 +1,12 @@
 $(function() {
 
   var cards = [];
+  var cardsJson;
+  var engine;
 
   // Configures and starts typeahead - run after ajax populates cards array
   function startTypeahead() {
-    var engine = new Bloodhound({
+    engine = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       local: $.map(cards, function(card) { return { value: card }; })
@@ -25,9 +27,8 @@ $(function() {
   }
 
   $.get('/cards.json', function(data) {
-    $.each(data, function(_, item) {
-      cards.push(item.card.name);
-    });
+    cardsJson = data;
+    cards = $.map(data, function(element) { return (element.card.name); });
 
     startTypeahead();
   });
