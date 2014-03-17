@@ -5,12 +5,13 @@
   font-size: 20px;
   border: 2px solid #bbb;
   width: 300px;
+  padding: 8px;
 
   &:focus {
-    background-color: #0097cf;
+    border-color: #4ECB8A;
   }
 }
-//
+
 .tt-query,
 .tt-hint,
 .tt-dropdown-menu,
