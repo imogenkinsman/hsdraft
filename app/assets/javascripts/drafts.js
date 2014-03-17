@@ -1,14 +1,9 @@
 $(function() {
 
   var cards = [];
-  $.get('/cards.json', function(data) {
-    $.each(data, function(_, item) {
-      cards.push(item.card.name);
-    });
-    setup();
-  });
 
-  function setup() {
+  // Configures and starts typeahead - run after ajax populates cards array
+  function startTypeahead() {
     var engine = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -28,6 +23,14 @@ $(function() {
         source: engine.ttAdapter()
       });
   }
+
+  $.get('/cards.json', function(data) {
+    $.each(data, function(_, item) {
+      cards.push(item.card.name);
+    });
+
+    startTypeahead();
+  });
 
 });
 
