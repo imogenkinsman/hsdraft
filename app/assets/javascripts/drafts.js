@@ -1,6 +1,6 @@
 $(function() {
 
-  var cards = ['sdfddf', 'asdf']
+  var cards = ['sdfddf', 'asdf', 'assdf']
 
   var engine = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),

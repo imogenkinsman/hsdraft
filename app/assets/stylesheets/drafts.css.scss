@@ -19,8 +19,13 @@
   font-size: 20px;
 }
 
-.tt-dataset-cards {
-  padding: 0 5px;
+.tt-suggestion {
+  padding: 0 10px;
+
+  &.tt-cursor {
+    background-color: #4ECB8A;
+    cursor: pointer;
+  }
 }
 
 .tt-hint {
