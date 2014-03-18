@@ -4,7 +4,6 @@
   @include border-radius(8px);
   font-size: 20px;
   border: 2px solid #bbb;
-  width: 300px;
   padding: 8px;
 
   &:focus {
@@ -35,7 +34,7 @@
 .tt-dropdown-menu {
   @include border-radius(8px);
   @include box-shadow(0, 5px, 10px, rgba(0, 0, 0, 0.2));
-  width: 300px;
+  width: 100%;
   padding: 8px 0;
   margin-top: 10px;
   border: 1px solid #bbb;
