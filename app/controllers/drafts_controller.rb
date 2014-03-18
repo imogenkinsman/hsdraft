@@ -11,7 +11,7 @@ class DraftsController < ApplicationController
   end
 
   def show
-    @draft = Draft.find(params[:id])
+    @draft = Draft.find params[:id]
   end
 
   private

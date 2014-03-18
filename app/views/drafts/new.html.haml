@@ -1,4 +1,4 @@
 %div(class='container')
-  = form_for @draft do |f|
-    = f.select :hero_id, Hero.all.map { |hero| [hero.name, hero.id] }
-    = f.submit
+  = form_for @draft, html: { class: 'form-inline' } do |f|
+    = f.select :hero_id, Hero.all.map { |hero| [hero.name, hero.id] }, {}, { class: "form-control" }
+    = f.submit(class: "btn btn-primary")
