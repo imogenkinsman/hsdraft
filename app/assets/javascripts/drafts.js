@@ -1,6 +1,6 @@
 $(function() {
 
-  var cards = [];
+  var cardnames = [];
   var cardsJson;
   var engine;
 
@@ -9,7 +9,7 @@ $(function() {
     engine = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
-      local: $.map(cards, function(card) { return { value: card }; })
+      local: $.map(cardnames, function(card) { return { value: card }; })
     });
 
     engine.initialize();
@@ -34,7 +34,7 @@ $(function() {
     });
 
     cardsJson = classCards;
-    cards = $.map(classCards, function(element) { return (element.card.name); });
+    cardnames = $.map(classCards, function(element) { return (element.card.name); });
 
     startTypeahead();
   });
