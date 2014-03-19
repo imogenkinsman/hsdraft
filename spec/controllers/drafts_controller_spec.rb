@@ -4,23 +4,28 @@ describe DraftsController do
 
   describe 'GET #new' do
     it 'assigns a new Draft to @draft' do
-
+      get :new
+      expect(assigns(:draft)).to be_a_new(Draft)
     end
 
     it 'renders the :new template' do
-
+      get :new
+      expect(response).to render_template(:new)
     end
   end
 
   describe 'GET #show' do
+    before(:each) do
+      @draft = create(:draft)
+      get :show, id: @draft
+    end
+
     it 'assigns the requested Draft to @draft' do
-      draft = create(:draft)
-      get :show, id: draft
-      expect(assigns(:draft)).to eq(draft)
+      expect(assigns(:draft)).to eq(@draft)
     end
 
     it 'renders the :show template' do
-
+      expect(response).to render_template(:show)
     end
   end
 
