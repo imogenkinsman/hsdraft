@@ -4,6 +4,17 @@ $(function() {
   var cardsJson;
   var engine;
 
+  $.get('/cards.json', function(data) {
+    var currentHero = $('#card-search').data('hero');
+
+    var classCards = $.grep(data, function(element) {
+      return element.card.hero_id === currentHero || !element.card.hero_id
+    });
+
+    cardsJson = availableCards = classCards;
+    startTypeahead();
+  });
+
   // Configures and starts typeahead - run after ajax populates cards array
   function startTypeahead() {
     engine = new Bloodhound({
@@ -25,17 +36,6 @@ $(function() {
         source: engine.ttAdapter()
       });
   }
-
-  $.get('/cards.json', function(data) {
-    var currentHero = $('#card-search').data('hero');
-
-    var classCards = $.grep(data, function(element) {
-      return element.card.hero_id === currentHero || !element.card.hero_id
-    });
-
-    cardsJson = availableCards = classCards;
-    startTypeahead();
-  });
 
 });
 

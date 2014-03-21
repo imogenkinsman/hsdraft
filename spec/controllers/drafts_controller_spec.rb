@@ -3,13 +3,15 @@ require 'spec_helper'
 describe DraftsController do
 
   describe 'GET #new' do
-    it 'assigns a new Draft to @draft' do
+    before(:each) do
       get :new
+    end
+
+    it 'assigns a new Draft to @draft' do
       expect(assigns(:draft)).to be_a_new(Draft)
     end
 
     it 'renders the :new template' do
-      get :new
       expect(response).to render_template(:new)
     end
   end
