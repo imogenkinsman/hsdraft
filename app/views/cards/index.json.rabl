@@ -1,3 +1,3 @@
 collection @cards
 cache @cards
-attributes :image_id, :name, :cost, :hero_id, :rarity, :type
+attributes :name, :image_id, :image_url, :cost, :hero_id, :rarity, :type
