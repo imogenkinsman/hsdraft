@@ -11,13 +11,15 @@ $(function() {
   });
 
   var CardView = Backbone.View.extend({
-    tagName: 'li',
+    tagName: 'div',
+    className: 'card',
     initialize: function() {
       _.bindAll(this, 'render');
     },
 
     render: function() {
-      $(this.el).html('<span>Test</span>')
+      $(this.el).html('Test')
+      return this;
     }
   });
 
@@ -30,7 +32,7 @@ $(function() {
     },
 
     initialize: function() {
-      _.bindAll(this, 'selected');
+      _.bindAll(this, 'selected', 'appendItem');
 
       this.collection = new Set();
       this.collection.bind('add', this.appendItem);
@@ -40,6 +42,7 @@ $(function() {
 
     selected: function(e) {
       if (this.count < 3) {
+        $('#card-search').val('');
         var card = new Card();
         this.collection.add(card);
       }
@@ -50,7 +53,7 @@ $(function() {
       var cardView = new CardView({
         model: item
       });
-      // append item somewhere on dom
+      $('#set').append(cardView.render().el);
     }
 
   });
