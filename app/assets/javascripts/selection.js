@@ -31,10 +31,26 @@ $(function() {
 
     initialize: function() {
       _.bindAll(this, 'selected');
+
+      this.collection = new Set();
+      this.collection.bind('add', this.appendItem);
+
+      this.count = 0;
     },
 
     selected: function(e) {
-      alert('selected');
+      if (this.count < 3) {
+        var card = new Card();
+        this.collection.add(card);
+      }
+    },
+
+    appendItem: function(item) {
+      this.count++;
+      var cardView = new CardView({
+        model: item
+      });
+      // append item somewhere on dom
     }
 
   });
