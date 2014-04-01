@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe CardsController do
+  render_views
 
   describe 'GET #index' do
 
@@ -9,7 +10,7 @@ describe CardsController do
       get :index, format: :json
 
       expect(response).to be_success
-      expect(assigns(:cards)).to eq([card])
+      expect(JSON.parse(response.body).first["card"]["name"]).to eq "angry chicken"
     end
 
   end

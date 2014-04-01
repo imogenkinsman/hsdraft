@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 //= require underscore-min
 //= require backbone-min
-//= require typeahead.bundle.min.js
+//= require typeahead.bundle
 //= require bootstrap
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./templates
+//= require_tree ./views
+//= require init
